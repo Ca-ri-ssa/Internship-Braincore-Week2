@@ -9,9 +9,11 @@ git clone -b main https://github.com/Ca-ri-ssa/Internship-Braincore-Week2.git
 ```
 
 ### 2. Install All dependency:
+Sebelum menginstalasi semua dependency, navigate ke directory ``bagian1-5/``:
 ```bash
-cd Bagian1-5/
+cd bagian1-5/
 ```
+Setelah selesai navigate, silahkan menjalankan command berikut:
 ```bash
 bun install
 ```
