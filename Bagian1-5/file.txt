@@ -1,0 +1,3 @@
+Terdapat 5 dan 6:
+- Jika kedua angka tersebut ditambah, maka menghasilkan 11.
+- Jika kedua angka tersebut dikalikan, maka menghasilkan 30.

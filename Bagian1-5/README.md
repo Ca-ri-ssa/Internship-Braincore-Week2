@@ -1,15 +1,22 @@
-# bagian1-5
+# Bagian 1 - 5
+Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
 
-To install dependencies:
 
+## Instruksi
+### 1. Clone the Repository
+```bash
+git clone -b main https://github.com/Ca-ri-ssa/Internship-Braincore-Week2.git
+```
+
+### 2. Install All dependency:
+```bash
+cd Bagian1-5/
+```
 ```bash
 bun install
 ```
 
-To run:
-
+### 3. Run the Code!
 ```bash
 bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.1.22. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
