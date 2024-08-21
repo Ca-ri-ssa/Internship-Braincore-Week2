@@ -1,5 +1,13 @@
 # Bagian 1 - 5
 Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
+<hr>
+
+## Topik
+1. Introduction
+2. Working with Modules
+3. TypeScript Fundamentals
+4. Buffers
+5. File Handling
 
 
 ## Instruksi
