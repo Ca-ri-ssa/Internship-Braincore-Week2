@@ -1,0 +1,29 @@
+body {
+    display: flex; 
+    justify-content: center; 
+    background-color: skyblue;
+}
+
+div {
+    border: 1px solid transparent; 
+    padding: 20px; 
+    width:200px; 
+    border-radius: 8px; 
+    background-color: white;
+}
+
+form {
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    gap: 8px;
+}
+
+button {
+    margin-top: 16px; 
+    padding: 8px 0; 
+    background-color: blue; 
+    color: white; 
+    border-color: transparent; 
+    border-radius: 4px;
+}
