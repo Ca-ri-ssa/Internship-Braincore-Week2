@@ -4,7 +4,7 @@ Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udem
 
 ## Instruksi
 ### 1. Install All dependency:
-Sebelum menginstalasi semua dependency, navigate ke directory ``Bagian6/``:
+Sebelum menginstalasi semua dependency, navigate ke directory ``Bagian7/``:
 ```bash
 cd Bagian7/
 ```
