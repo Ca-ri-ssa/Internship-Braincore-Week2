@@ -1,15 +1,19 @@
-# bagian9
+# Bagian 9 - SQLite with Bun
+Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
 
-To install dependencies:
 
+## Instruksi
+### 1. Install All dependency:
+Sebelum menginstalasi semua dependency, navigate ke directory ``Bagian9/``:
+```bash
+cd Bagian9/
+```
+Setelah selesai navigate, silahkan menjalankan command berikut:
 ```bash
 bun install
 ```
 
-To run:
-
+### 2. Run the Code!
 ```bash
 bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.1.22. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
