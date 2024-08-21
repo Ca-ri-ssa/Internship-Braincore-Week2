@@ -1,0 +1,16 @@
+h1 {
+    color: aquamarine;
+}
+
+h2 {
+    color: white;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+}
