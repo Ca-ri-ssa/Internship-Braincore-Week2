@@ -1,6 +1,5 @@
 # Bagian 1 - 5
 Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
-<hr>
 
 ## Topik
 1. Introduction
