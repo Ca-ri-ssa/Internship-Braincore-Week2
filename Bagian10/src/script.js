@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
                             <a href="/edit/${product.id}" class="btn btn-outline-dark mx-1 mt-4 edit-buttons">
                                 <i class="bi bi-pencil-fill"></i>
                             </a>
-                            <a class="btn btn-outline-dark mx-1 mt-4 edit-buttons" onclick="deleteHandler()">
+                            <a href="/delete/${product.id}" class="btn btn-outline-dark mx-1 mt-4 edit-buttons" onclick="deleteHandler()">
                                 <i class="bi bi-trash-fill"></i>
                             </a>
                         </div>

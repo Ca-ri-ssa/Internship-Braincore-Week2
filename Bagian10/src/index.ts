@@ -26,6 +26,11 @@ const app = new Elysia()
         db.updateProduct(parseInt(params.id), <Product>body, );
         set.redirect ="/";
     })
+
+    .get('/delete/:id', ({ db, params, set }) => {
+        db.deleteProduct(parseInt(params.id));
+        set.redirect = "/";
+    })
     .listen(3000)
 
 console.log(`🦊 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`)

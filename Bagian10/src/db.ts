@@ -31,6 +31,12 @@ export class ProductDb {
         )
     }
 
+    deleteProduct(id: number) { 
+        return this.db.run(
+            `DELETE FROM products WHERE id=${id}`
+        )
+    }
+
     createTable() {
         return this.db.run(
             "CREATE TABLE IF NOT EXISTS products(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, price NUM, image TEXT)"
