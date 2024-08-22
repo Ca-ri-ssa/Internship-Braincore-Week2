@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Bagian 11 - Carissa Chandra</title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 300;
+        text-align: center;
+        margin-top: -10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        border: 1px solid #1f2022;
+        padding: 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+
+      .inputMsg {
+        flex: 1;
+        outline: none;
+        width: 80%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      #btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        margin: 5px auto;
+        border: none;
+        width: 50%;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #btn:hover {
+        background-color: #0056b3;
+      }
+      #msg_container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Chat Application</h1>
+      <input type="text" class="inputMsg" placeholder="Type a message..." id="txtMessage"/>
+      <button id="btn">Send</button>
+    </form>
+    <div id="msg_container"></div>
+
+    <script>
+      const ws = new WebSocket("ws://localhost:3000");
+
+      const btn = document.getElementById("btn");
+      const inputMsg = document.getElementById("txtMessage");
+
+      btn.addEventListener("click", () => {
+        const msg = inputMsg.value;
+        const msgTemplate = document.getElementById("msg_template").innerHTML;
+        const msgContainer = document.getElementById("msg_container");
+        const html = ejs.render(msgTemplate, { message: msg });
+        msgContainer.insertAdjacentHTML("beforeend", html);
+
+        ws.send(msg);
+        inputMsg.value = "";
+        inputMsg.focus();
+        event.preventDefault();
+      });
+
+      ws.addEventListener("message", (e) => {
+        const msg = e.data;
+        try{
+            const users = JSON.parse(msg);
+            if(Array.isArray(users)) {
+                const userListTemplate = document.getElementById("userList_template").innerHTML;
+                const userContainer = document.getElementById("user_container");
+
+                const html = ejs.render(userListTemplate, {users});
+                userContainer.innerHTML = html;
+                return;
+            }
+        } catch(e) {
+            console.log(msg);
+        }
+      });
+    </script>
+  </body>
+
+  <div id="msg_container"></div>
+  <div id="user_container"></div>
+
+  <script type="text/html" id="msg_template">
+    <div>
+      <p><%= message %></p>
+    </div>
+  </script>
+
+  <script type="text/html" id="userList_template">
+    <ul>
+        <% for(let i=0; i<users.length; i++) { %>
+            <li> <%= users[i] %> </li>
+        <% } %>
+    </ul>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js"></script>
+</html>
