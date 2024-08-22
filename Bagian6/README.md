@@ -1,4 +1,4 @@
-# Bagian 6 - HTTP Server - Bun.server()
+# Bagian 6: HTTP Server - Bun.server()
 Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
 
 

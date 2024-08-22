@@ -1,4 +1,4 @@
-# Bagian 7 - Bun with Express
+# Bagian 7: Bun with Express
 Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
 
 

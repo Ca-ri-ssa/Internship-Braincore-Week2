@@ -1,12 +1,12 @@
-# Bagian 9: SQLite with Bun
+# Bagian 11: Websockets with Bun
 Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
 
 
 ## Instruksi
 ### 1. Install All dependency:
-Sebelum menginstalasi semua dependency, navigate ke directory ``Bagian9/``:
+Sebelum menginstalasi semua dependency, navigate ke directory ``Bagian11/``:
 ```bash
-cd Bagian9/
+cd Bagian11/
 ```
 Setelah selesai navigate, silahkan menjalankan command berikut:
 ```bash

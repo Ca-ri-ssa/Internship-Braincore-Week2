@@ -1,4 +1,4 @@
-# Bagian 8 - Elysia
+# Bagian 8: Elysia
 Kelas Udemy "[Mastering Bun - The Modern Fullstack Development](https://www.udemy.com/course/mastering-bun-the-modern-fullstack-development/)".
 
 
