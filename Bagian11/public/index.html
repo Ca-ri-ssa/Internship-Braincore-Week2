@@ -45,10 +45,6 @@
 
       btn.addEventListener("click", () => {
         const msg = inputMsg.value;
-        // const msgTemplate = document.getElementById("msg_template").innerHTML;
-        // const msgContainer = document.getElementById("msg_container");
-        // const html = ejs.render(msgTemplate, { message: msg });
-        // msgContainer.insertAdjacentHTML("beforeend", html);
 
         ws.send(msg);
         inputMsg.value = "";
@@ -76,7 +72,7 @@
               users.forEach((user) => {
                 if(user.clientId === clientId) {
                   user.self = true;
-                  user.username = `${user.username} (self)`;
+                  user.username = `${user.username} (You)`;
                 }
               });
 
@@ -102,8 +98,8 @@
   </body>
 
   <script type="text/html" id="msg_template">
-    <div style="margin-top: 55px;">
-      <p style="font-size: 20px;"><%= message %></p>
+    <div style="margin-top: 20px; padding: 0 40px 0 0;">
+      <p style="font-size: 20px; color: white; padding: 8px; border-radius: 8px;" class="bg-primary"><%= message %></p>
     </div>
   </script>
 

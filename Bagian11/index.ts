@@ -79,7 +79,7 @@ const server = Bun.serve<{ username: string }>({
 
             server.publish("broadcastMsg", JSON.stringify({
                 type: "broadcastMsg",
-                data: `${username} says: ${msg}`
+                data: `${username} - ${msg}`
             }));
 
             if(ackMsg > 0) {

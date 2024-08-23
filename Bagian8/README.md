@@ -15,5 +15,5 @@ bun install
 
 ### 2. Run the Code!
 ```bash
-bun run index.ts
+bun run dev
 ```
