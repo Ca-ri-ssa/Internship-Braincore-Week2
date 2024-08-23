@@ -43,7 +43,12 @@ const server = Bun.serve<{ username: string }>({
             ws.send(JSON.stringify(clientInfoMsg));
 
             const userList = Array.from(clientMap.values()).map(
-                (info) => info.username
+                (info) => {
+                    return {
+                        clientId: info.clientId,
+                        username: info.username,
+                    }
+                }
             );
             ws.subscribe("userList");
             server.publish("userList", JSON.stringify(userList));
@@ -72,7 +77,10 @@ const server = Bun.serve<{ username: string }>({
             const username = clientInfo ? clientInfo.username: "unknown";
             const ackMsg = ws.send("Message Delivered");
 
-            server.publish("broadcastMsg", `${username} - ${msg}`);
+            server.publish("broadcastMsg", JSON.stringify({
+                type: "broadcastMsg",
+                data: `${username} says: ${msg}`
+            }));
 
             if(ackMsg > 0) {
                 console.log(`Acknowledgement sent to client ${clientId}: ${msg}`);
